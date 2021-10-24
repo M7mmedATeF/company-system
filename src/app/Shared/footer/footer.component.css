@@ -1,0 +1,21 @@
+footer {
+    background-color: #111;
+    text-align: center;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+footer i {
+    color: red;
+    padding: 0 2px;
+}
+
+footer a {
+    color: var(--primare-color);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0 2px;
+}

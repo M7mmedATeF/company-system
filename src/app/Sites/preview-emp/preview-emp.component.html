@@ -1,0 +1,26 @@
+<div class="parent">
+    <div class="container">
+        <div class="preview">
+
+            <div class="left col-md-4">
+                <div class="img" [style.backgroundImage]="">
+                    <img [src]="obj.profileIMG" onerror="this.src='../../../assets/pingo.png'" width="100%">
+                </div>
+                <h3> {{obj.name}} </h3>
+            </div>
+
+            <div class="right col-md-8">
+                <ul>
+                    <li>Name: {{obj.name}}</li>
+                    <li>Position: {{obj.position}}</li>
+                    <li>Sallary: {{obj.sallary}}</li>
+                    <li>Level: {{obj.level}}</li>
+                    <li>Degree: {{obj.degree}}</li>
+                    <li *ngIf="obj.facebook != ''">FaceBook: <a [href]="obj.facebook" target="_blanck">See Profile</a></li>
+                    <li *ngIf="obj.github != ''">Github: <a [href]="obj.github" target="_blanck">See Profile</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>

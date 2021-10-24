@@ -1,0 +1,96 @@
+nav {
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+    color: #fff;
+    height: 11vh;
+}
+
+nav p {
+    padding-top: 10px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+nav p img {
+    padding: 0 10px 0 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transition: 0.3s all ease-in-out;
+    font-weight: 600;
+}
+
+nav ul li>a {
+    text-decoration: none;
+    height: 11vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+nav ul li:hover {
+    background-color: #222;
+}
+
+nav ul li ul {
+    position: absolute;
+    z-index: 99;
+    top: 90%;
+    right: 0%;
+    display: none;
+    width: 200px;
+    background-color: #111;
+}
+
+nav ul li:hover ul {
+    display: block;
+    animation: fade 1s;
+}
+
+nav ul li ul li {
+    height: auto;
+    padding: 0;
+}
+
+nav ul li ul li:hover {
+    background-color: #333;
+}
+
+nav ul li ul li a {
+    text-decoration: none;
+    height: auto;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+
+/*----------Animation-----------*/
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

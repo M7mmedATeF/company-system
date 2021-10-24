@@ -1,0 +1,40 @@
+<div class="add">
+    <div class="container">
+        <h1>Add New Employee</h1>
+        <div class="dataEnter">
+            <p>Name*:</p>
+            <input type="text" required #name="ngModel" minlength="3" maxlength="20" [(ngModel)]="obj.name" />
+            <p>Position*:</p>
+            <input type="text" required #position="ngModel" minlength="2" maxlength="20" [(ngModel)]="obj.position" />
+            <p>Sallary*:</p>
+            <input type="url" required #sallary="ngModel" [(ngModel)]="obj.sallary" />
+            <p>Level:</p>
+            <input type="url" [(ngModel)]="obj.level" />
+            <p>Degree:</p>
+            <input type="url" [(ngModel)]="obj.degree" />
+            <p>Photo URL:</p>
+            <input type="url" [(ngModel)]="obj.profileIMG" />
+            <p>FaceBook:</p>
+            <input type="url" [(ngModel)]="obj.facebook" />
+            <p>Github:</p>
+            <input type="url" [(ngModel)]="obj.github" />
+
+            <div class="subBTN" *ngIf="name.invalid || position.invalid">
+                <button class="submitBTN btn btn-primary" disabled> Submit </button>
+            </div>
+
+            <div class="subBTN" *ngIf="name.valid && position.valid">
+                <button class="submitBTN btn btn-primary" (click)="add()"> Submit </button>
+            </div>
+
+            <div class="errMSG" *ngIf="(name.invalid && name.touched ) || (sallary.invalid && sallary.touched ) || (position.invalid && position.touched )">
+                <p>Please Enter Valid Values:</p>
+                <ul>
+                    <li>Name: Must 3-20 Character</li>
+                    <li>Position: Must 2-20 Character</li>
+                    <li>Sallary: is Required</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+.emp {
+    padding: 10px 0;
+}
+
+.emp table {
+    color: #fff;
+    text-align: center;
+}
+
+.emp table thead {
+    font-weight: 700;
+}
+
+.emp table tbody {
+    font-size: 20px;
+}
+
+.emp table tbody .name {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.emp table tbody tr td button {
+    margin-right: 10px;
+}
